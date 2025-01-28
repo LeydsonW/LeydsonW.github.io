@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div id="map" style="height: 500px;"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script>
+        // Cria o mapa
+        const map = L.map('map', {
+            crs: L.CRS.Simple, // Coordenação simples
+            minZoom: -1,
+        });
+
+        // Dimensões da imagem
+        const bounds = [[0, 0], [4724, 3953]]; // Altere para o tamanho da sua imagem
+        const image = L.imageOverlay('Mapa.png', bounds).addTo(map);
+
+        map.fitBounds(bounds); // Centraliza o mapa na imagem
+    </script>
+</body>
+</html>
