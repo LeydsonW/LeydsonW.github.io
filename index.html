@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
-    <div id="map" style="height: 500px;"></div>
+    <div id="map" style="height: 700px;"></div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script>
         // Cria o mapa
@@ -14,7 +14,7 @@
         });
 
         // Dimensões da imagem
-        const bounds = [[0, 0], [1000, 1000]]; // Altere para o tamanho da sua imagem
+        const bounds = [[0, 0], [1500, 1500]]; // Altere para o tamanho da sua imagem
         const image = L.imageOverlay('Mapa.png', bounds).addTo(map);
 
         map.fitBounds(bounds); // Centraliza o mapa na imagem
